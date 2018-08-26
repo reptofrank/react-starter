@@ -1,0 +1,24 @@
+{
+  "name": "reactpos",
+  "version": "1.0.0",
+  "description": "Point of Sale frontend built with React",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Obinna Okafor",
+  "license": "MIT",
+  "dependencies": {
+    "babel-core": "^6.26.3",
+    "babel-loader": "^7.1.4",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-react": "^6.24.1",
+    "react": "^16.4.2",
+    "react-dom": "^16.4.2",
+    "webpack": "^4.17.1"
+  },
+  "devDependencies": {
+    "babel-preset-es2015": "^6.24.1",
+    "webpack-cli": "^3.1.0"
+  }
+}
