@@ -1,0 +1,17 @@
+body {
+	margin: 0;
+}
+
+.main {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.section {
+	min-height: 100vh;
+	flex: 1 0 50%;
+}
+
+.section:last-of-type {
+	background: #389BF8;
+}
