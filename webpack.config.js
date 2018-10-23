@@ -1,15 +1,22 @@
-const path = require('path');
-
 module.exports = {
   entry: './index.js',
-  mode: 'development',
+  mode: "development",
   output: {
-    path: path.resolve(__dirname, 'dist'),
+    path: __dirname + '/dist',
     filename: 'main.js'
   },
   module: {
-        rules: [
-		  { test: /\.js$/, exclude: /node_modules/, loader: "babel-loader" }
-		]
+    rules: [
+      {
+        test: /\.js$/,
+        use: {
+          loader: 'babel-loader',
+          options: {
+            cacheDirectory: true
+          }
+        },
+        exclude: /node_modules/
+      }
+    ]
   }
 };
