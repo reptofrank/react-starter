@@ -1,9 +1,11 @@
 module.exports = {
-  entry: './index.js',
+  entry: {
+    index: ["babel-polyfill", './index.js']
+  },
   mode: "development",
   output: {
     path: __dirname + '/dist',
-    filename: 'main.js'
+    filename: "[name].js"
   },
   module: {
     rules: [
@@ -12,10 +14,28 @@ module.exports = {
         use: {
           loader: 'babel-loader',
           options: {
-            cacheDirectory: true
+            cacheDirectory: false
           }
         },
         exclude: /node_modules/
+      },
+      { test: /\.json$/, loader: 'json-loader' },
+      {
+        test: /\.css$/,
+        loader: 'style-loader'
+      },
+      {
+        test: /\.css$/,
+        loader: 'css-loader',
+        query: {
+          modules: true
+        }
+      },
+      {
+        test: /\.(png|svg|jpg|gif)$/,
+        use: [
+          'file-loader'
+        ]
       }
     ]
   }
